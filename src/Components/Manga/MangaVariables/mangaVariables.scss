@@ -29,12 +29,12 @@
 
 .manga-img-var2 {
     position: relative;
-    width: 128px;
-    height: 180px;
+    width: 188px;
+    height: 260px;
     border-radius: 14px;
     img {
-        width: 128px;
-        height: 180px;
+        width: 188px;
+        height: 260px;
         border-radius: 14px;
     }
 
@@ -56,5 +56,30 @@
     p {
         font-size: 12pt;
         color: #242424;
+    }
+}
+
+.manga-img-var3 {
+    position: relative;
+    width: 128px;
+    height: 180px;
+    border-radius: 14px;
+    img {
+        width: 128px;
+        height: 180px;
+        border-radius: 14px;
+    }
+
+    .flag-img-var2 {
+        position: absolute;
+        bottom: 0.375rem;
+        right: 0.5rem;
+        width: 24px;
+        height: 24px;
+        
+        img {
+            width: 24px;
+            height: 24px;
+        }
     }
 }

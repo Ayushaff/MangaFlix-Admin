@@ -1,9 +1,10 @@
 import { memo, useEffect } from 'react';
 import { useObserver } from '../../Hooks/observer';
+import { useDispatch, useSelector } from 'react-redux';
 
 const MainContainer = memo(({ children, mainClasses = '', containerClasses = '', isHeaderBlack = false }) => {
     const [observerStatus, setObserverRef] = useObserver({threshold: 0});
-    
+    const theme = useSelector((state) => state.theme);
     useEffect(() => {
         const headerPlug = document.querySelector('.header-plug');
         setObserverRef(headerPlug);        
@@ -18,9 +19,11 @@ const MainContainer = memo(({ children, mainClasses = '', containerClasses = '',
         return () => {
             toggleStyles('remove');
         }
+        //console.log("-->"+theme);
     }, [observerStatus]);
 
     const toggleStyles = (type) => {
+        // type='remove';
         const header = document.querySelector('.header-block');
 
         const addStyles = () => {
@@ -45,8 +48,10 @@ const MainContainer = memo(({ children, mainClasses = '', containerClasses = '',
     }
 
     return (
-        <main className={mainClasses}>
-            <div className={containerClasses}>
+        <main className={mainClasses} style={{
+            backgroundColor : theme.colors.body,
+        }}>
+            <div className={containerClasses} >
                 { children }
             </div>
         </main>

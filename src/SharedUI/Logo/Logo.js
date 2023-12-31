@@ -4,7 +4,7 @@ import styles from './logo.module.scss';
 import { MenuLinesIco, MenuCrossIco } from '../../Assets/Svg/Menu';
 import { Link } from 'react-router-dom';
 
-const Logo = ({ handleMenu, ico }) => {
+const Logo = ({ handleMenu, ico ,color = 'black'}) => {
     return (
         <div id="logo" className={ico.type === 'open' ? styles.logo : styles.logo + " " + styles.logo_side_main}>
             {ico.side === 'left'
@@ -13,10 +13,10 @@ const Logo = ({ handleMenu, ico }) => {
                     ? <MenuLinesIco onClick={handleMenu} />
                     : <MenuCrossIco onClick={handleMenu} /> 
                   }
-                  <Link to={"/"}><h1>Digidev</h1></Link>
+                  <Link to={"/"}><h1 style={{color: color}}>MANGAFLIX</h1></Link>
                   </>
                 : <>
-                  <Link to={"/"}><h1>Digidev</h1></Link>
+                  <Link to={"/"}><h1 style={{color: color}}>MANGAFLIX</h1></Link>
                   { ico.type === 'close'
                     ? <MenuCrossIco onClick={handleMenu} />
                     : <MenuLinesIco onClick={handleMenu} /> 

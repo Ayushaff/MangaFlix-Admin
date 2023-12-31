@@ -25,7 +25,7 @@ const PageArrowLink = memo(
               <FontAwesomeIcon icon={faArrowRight} />
               <h3
                 style={{
-                  color: "blue",
+                  color: "white",
                 }}
               >
                 {title}
@@ -35,18 +35,18 @@ const PageArrowLink = memo(
             <>
               <h3
                 style={{
-                  color: "blue",
+                  color: "white",
                 }}
               >
                 {title}
               </h3>
               <div
                 style={{
-                  hoverColor: "blue",
+                  hoverColor: "white",
                 }}
               >
-                View All &nbsp;
-                <FontAwesomeIcon icon={faArrowRight} style={{}} />
+                <p style={{color: "white"}}>View All </p>&nbsp;
+                <FontAwesomeIcon icon={faArrowRight} style={{color :"white"}} />
               </div>
             </>
           )}

@@ -12,10 +12,15 @@ import UserPage from './Pages/User/UserPage';
 import Library from './Pages/Library/Library';
 import MDLists from './Pages/MDLists/MDLists';
 import CreateList from './Pages/CreateList/CreateList';
+import themeSlice from './Store/Slices/themeSlice';
+import { useSelector } from 'react-redux';
 
 const App = () => {
+  const theme=useSelector((state)=>state.theme)
   return (
-    <div className="App">
+    <div className="App" style={{
+      backgroundColor: theme.colors.body,
+    }}>
       <Router>
       <Header />
       <div className="content__wrap">
