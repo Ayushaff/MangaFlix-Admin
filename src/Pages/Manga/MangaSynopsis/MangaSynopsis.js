@@ -1,11 +1,7 @@
-import React, { memo } from 'react';
+import React, { memo } from "react";
 
 const MangaSynopsis = memo(({ description }) => {
-    return (
-        <div className="synopsis">
-            <p>{description}</p>
-        </div>
-    );
+  return <p>{description}</p>;
 });
 
 export default MangaSynopsis;

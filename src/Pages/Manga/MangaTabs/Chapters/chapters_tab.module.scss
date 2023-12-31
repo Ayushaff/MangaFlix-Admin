@@ -1,9 +1,10 @@
 .wrapp {
-    display: grid; 
-    grid-template-columns: 1fr 2.6fr;
+    display: grid;
+    grid-template-columns:3fr 1fr ;
+    gap: 40px; 
 }
 
-@media (max-width: 900px)  {
+@media (max-width: 900px) {
     .wrapp {
         grid-template-columns: 1fr;
     }

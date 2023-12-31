@@ -166,7 +166,7 @@ const Slider = memo(({children}) => {
                     children
                 }
             </div>
-            <div className="slider-controls" ref={sliderControls}>
+            {/* <div className="slider-controls" ref={sliderControls}>
                 {secArr.map((item, index) => {
                     if (item.i !== "") {
                         return (
@@ -178,7 +178,7 @@ const Slider = memo(({children}) => {
                         return true
                     }
                 })}
-            </div>
+            </div> */}
         </div>
     );
 });

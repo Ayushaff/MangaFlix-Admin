@@ -13,10 +13,10 @@ const Logo = ({ handleMenu, ico }) => {
                     ? <MenuLinesIco onClick={handleMenu} />
                     : <MenuCrossIco onClick={handleMenu} /> 
                   }
-                  <Link to={"/"}><h1>MangaDex</h1></Link>
+                  <Link to={"/"}><h1>Digidev</h1></Link>
                   </>
                 : <>
-                  <Link to={"/"}><h1>MangaDex</h1></Link>
+                  <Link to={"/"}><h1>Digidev</h1></Link>
                   { ico.type === 'close'
                     ? <MenuCrossIco onClick={handleMenu} />
                     : <MenuLinesIco onClick={handleMenu} /> 

@@ -35,16 +35,16 @@
 }
 
 .manga-container {
-    display: grid;
-    max-width: 95%;
-    justify-self: center;
-    gap: 10px;
-    grid-template-areas: 
-        'manga-cover manga-title'
-        'manga-cover introduction'
-        'synopsis synopsis'
-        'content content';
-    grid-template-columns: 1fr 6fr;
+    // display: grid;
+    // // max-width: 95%;
+    // justify-self: center;
+    // // gap: 10px;
+    // grid-template-areas: 
+    //     'manga-cover manga-title'
+    //     'manga-cover introduction'
+    //     'synopsis synopsis'
+    //     'content content';
+    // grid-template-columns: 1fr 6fr;
 }
 
 .manga-title {
@@ -57,13 +57,16 @@
     flex-direction: column;
     align-items: stretch;
     justify-content: space-between;
+     margin-left: 20vh; /* Adjust the value as needed */
+     margin-top:30px; /* Adjust the value as needed */
+    /* OR */
 
     .manga-statistics {
         display: none;
     }
     
     p {
-        color: white;
+        color: black;
     }
     
     .main-title {

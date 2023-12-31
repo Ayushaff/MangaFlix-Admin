@@ -16,6 +16,7 @@ const Chapter = ({ chapter, byUser = false }) => {
 
     useEffect(() => {
         if (chapter) setChName(Object.keys(chapter)[0]);
+        console.log(chapter);
     }, [chapter])
 
     const handleChapter = () => {
@@ -32,13 +33,15 @@ const Chapter = ({ chapter, byUser = false }) => {
                 </div>
             }
             <div className={styles.content_wrapp} ref={contentBlock} style={byUser ? {marginBottom: '0px'} : {}}>
-                {
+                
+                
+                {/* {
                     chapter[chName]?.map((item, index) => (
                         <ChapterEl key={item?.attributes?.title + index} 
                             item={item} index={index} chapter={chapter[chName]} chName={chName} 
                         />
                     ))
-                }
+                } */}
             </div>
         </div>
     );

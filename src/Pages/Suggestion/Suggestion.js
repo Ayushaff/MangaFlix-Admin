@@ -21,6 +21,7 @@ import MangaVar1 from '../../Components/Manga/MangaVariables/MangaVar1';
 import MangaVar2 from '../../Components/Manga/MangaVariables/MangaVar2';
 import Spinner from '../../SharedUI/LoadComponents/Spiner/Spinner';
 import { Helmet } from 'react-helmet';
+import Banner from './Banner/Banner';
 
 const Suggestion = memo(() => {
 	const dispatch = useDispatch();
@@ -43,11 +44,13 @@ const Suggestion = memo(() => {
 		>
 			<Helmet>
 				<meta charSet="utf-8" />
-				<title>Test</title>
+				<title>MangaDex</title>
 				<meta name="description" content={`MangaDex manga homepage`} />
 			</Helmet>
 
-			<SuggestItem title="Seasonal" link="titles/seasonal">
+
+
+			{/* <SuggestItem title="Seasonal" link="titles/seasonal">
 				{seasonal.load.status === 'loading' ? (
 					<Spinner customStyle={{ width: '50px', height: '50px' }} />
 				) : (
@@ -64,8 +67,24 @@ const Suggestion = memo(() => {
 
 			<SuggestItem title="Latest Updates" link="">
 				<LatestUpdates chapters={latestUpdates?.data} />
-			</SuggestItem>
+			</SuggestItem> */}
 
+			<Banner></Banner>
+
+			<SuggestItem title="Latest Update" link="titles/recently">
+				{recentlyAdded.load.status === 'loading' ? (
+					<Spinner customStyle={{ width: '50px', height: '50px' }} />
+				) : (
+					<Slider>
+						<MangaItems
+							mangas={recentlyAdded?.data}
+							Variant={MangaVar2}
+							Wrapp={SliderItem}
+							styles={{ display: 'flex', width: '128px', height: '180px' }}
+						/>
+					</Slider>
+				)}
+			</SuggestItem>
 			<SuggestItem title="Recently added" link="titles/recently">
 				{recentlyAdded.load.status === 'loading' ? (
 					<Spinner customStyle={{ width: '50px', height: '50px' }} />
@@ -80,6 +99,34 @@ const Suggestion = memo(() => {
 					</Slider>
 				)}
 			</SuggestItem>
+			<SuggestItem title="Most Popular" link="titles/recently">
+				{recentlyAdded.load.status === 'loading' ? (
+					<Spinner customStyle={{ width: '50px', height: '50px' }} />
+				) : (
+					<Slider>
+						<MangaItems
+							mangas={recentlyAdded?.data}
+							Variant={MangaVar2}
+							Wrapp={SliderItem}
+							styles={{ display: 'flex', width: '128px', height: '180px' }}
+						/>
+					</Slider>
+				)}
+			</SuggestItem>
+			<SuggestItem title="Top Rated" link="titles/recently">
+				{recentlyAdded.load.status === 'loading' ? (
+					<Spinner customStyle={{ width: '50px', height: '50px' }} />
+				) : (
+					<Slider>
+						<MangaItems
+							mangas={recentlyAdded?.data}
+							Variant={MangaVar2}
+							Wrapp={SliderItem}
+							styles={{ display: 'flex', width: '128px', height: '180px' }}
+						/>
+					</Slider>
+				)}
+			</SuggestItem>	 
 		</MainContainer>
 	);
 });
