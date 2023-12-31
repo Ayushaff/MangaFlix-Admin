@@ -11,6 +11,11 @@
     width: 200px;
 }
 
+.manga-header-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .banner-image {
     position: absolute;
     top: 0;
@@ -49,16 +54,16 @@
 
 .manga-title {
     padding: 10px;
-    height: 12.4rem;
-    margin-bottom: 16px;
-    padding-bottom: 0px;
-    grid-area: manga-title;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: space-between;
-     margin-left: 20vh; /* Adjust the value as needed */
-     margin-top:30px; /* Adjust the value as needed */
+    //height: 12.4rem;
+    //margin-bottom: 16px;
+    //padding-bottom: 0px;
+    //grid-area: manga-title;
+    //display: flex;
+    //flex-direction: column;
+    //align-items: stretch;
+    //justify-content: space-between;
+     //margin-left: 20vh; /* Adjust the value as needed */
+     //margin-top:30px; /* Adjust the value as needed */
     /* OR */
 
     .manga-statistics {

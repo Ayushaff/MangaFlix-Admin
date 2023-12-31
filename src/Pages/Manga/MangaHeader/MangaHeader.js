@@ -30,14 +30,18 @@ const MangaHeader = memo(({ mangaInfo = {} }) => {
 
   return (
     <>
-      <Cover
-        src={mangaCoverUrl}
-        alt=""
-        classLists={{ wrapp: "manga-cover-cl", img: "" }}
-        countryIco={mangaInfo?.data?.attributes?.originalLanguage}
-      />
+      <div className="manga-header-box">
+        <Cover
+          src={mangaCoverUrl}
+          alt=""
+          classLists={{ wrapp: "manga-cover-cl", img: "" }}
+          countryIco={mangaInfo?.data?.attributes?.originalLanguage}
+        />
+        <MangaTitle mangaInfo={mangaInfo} />
+      </div>
+
       <MangaIntroduction mangaInfo={mangaInfo} />
-      <MangaTitle mangaInfo={mangaInfo} />
+
       {/* <div className="banner-image" style={backImage}></div> */}
     </>
   );
