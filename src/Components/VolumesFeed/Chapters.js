@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { collectData } from '../../Utils/layoutData';
 import Chapter from './Chapter';
 
-const Chapters = ({ volume }) => {
+const Chapters = ({ volume , mangaInfo}) => {
     const [chapters, setChapters] = useState([]);
     useEffect(() => {
         if (volume) {
@@ -13,7 +13,7 @@ const Chapters = ({ volume }) => {
     }, [volume])
     
     return (
-        chapters.map((chapter, index) => <Chapter key={Object.keys(chapter)[0] + index} chapter={chapter} />)
+        chapters.map((chapter, index) => <Chapter key={Object.keys(chapter)[0] + index} chapter={chapter} mangaInfo={mangaInfo}/>)
     );
 };
 

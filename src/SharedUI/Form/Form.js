@@ -9,10 +9,10 @@ const Form = ({type, additional = '', children}) => {
             <form onSubmit={e => e.preventDefault()}>
                 <div className="singup-title">
                     <div>
-                        <FontAwesomeIcon icon={faArrowLeft} />
-                        <h1>{type}</h1>
+                        {/* <FontAwesomeIcon icon={faArrowLeft} /> */}
+                        {/* <h1>{type}</h1> */}
                     </div>
-                    { additional ? <p>{additional}</p> : null }
+                    {/* { additional ? <p>{additional}</p> : null } */}
                 </div>
                 { children }
             </form>

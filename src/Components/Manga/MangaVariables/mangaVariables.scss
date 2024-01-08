@@ -29,13 +29,13 @@
 
 .manga-img-var2 {
     position: relative;
-    width: 188px;
-    height: 260px;
-    border-radius: 14px;
+    width: 195px;
+    height: 273px;
+    border-radius: 4px;
     img {
-        width: 188px;
-        height: 260px;
-        border-radius: 14px;
+        width: 195px;
+        height: 273px;
+        border-radius: 4px;
     }
 
     .flag-img-var2 {
@@ -53,24 +53,32 @@
 }
 
 .manga-de-var2 {
+    width: 188px;
     p {
         font-size: 12pt;
         color: #242424;
     }
 }
 
+.manga-var3-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
 .manga-img-var3 {
     position: relative;
-    width: 128px;
-    height: 180px;
-    border-radius: 14px;
+    width: 160px;
+    height: 240px;
+    border-radius: 4px;
     img {
-        width: 128px;
-        height: 180px;
-        border-radius: 14px;
+        width: 160px;
+        height: 240px;
+        border-radius: 4px;
     }
 
-    .flag-img-var2 {
+    .flag-img-var3 {
         position: absolute;
         bottom: 0.375rem;
         right: 0.5rem;
@@ -82,4 +90,63 @@
             height: 24px;
         }
     }
+}
+
+.manga-de-var3 {
+    width: 160px;
+    p {
+        font-size: 12pt;
+        color: #242424;
+    }
+}
+
+.manga-var3-button {
+    border-radius: 8px;
+    width: 160px;
+    background-color: #092635;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    
+    p {
+        margin: 4px 6px ;
+        overflow-x: hidden;
+        font-size: 12px;
+        color: white;
+    }
+}
+
+.mangavar4-main{
+    border-bottom: 1px solid black;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.manga-img-var4 {
+    //position: relative;
+    width: 60px;
+    height: 90px;
+    //border-radius: 14px;
+    img {
+        width: 60px;
+        height: 90px;
+        //border-radius: 14px;
+    }
+}
+
+.manga-de-var4 {
+    p {
+        font-size: 12pt;
+        color: #242424;
+    }
+}
+
+
+.counter {
+    padding-right :15px;
+    padding-left :10px;
+    // border : 1px solid black;
 }

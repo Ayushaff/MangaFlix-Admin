@@ -36,7 +36,7 @@ export const fetchLatestUpdates = createAsyncThunk(
     async function(_, {rejectWithValue, dispatch}) {
         try {
             const latestUpdatesList = await MangaDexApi.getLatestUpdateChapters();
-
+            console.log(latestUpdatesList);
             if (!latestUpdatesList.ok) {
                 throw new Error('Something is going wrong...');
             }
@@ -84,9 +84,11 @@ export const fetchRecentlyAdded = createAsyncThunk(
             if (!recentlyAdded.ok) {
                 throw new Error('Something is going wrong...');
             }
+            // console.log("/sugges/fetchRecentlyAdded");
+            
 
             const recentlyAddedData = await recentlyAdded.json();
-            
+            console.log(recentlyAddedData);
             dispatch(setRecentlyAdded(recentlyAddedData.data));
         } catch (error) {
             return rejectWithValue(error.message);

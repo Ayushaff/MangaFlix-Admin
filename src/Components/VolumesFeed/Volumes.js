@@ -9,7 +9,7 @@ import { fetchMangaFeed } from '../../Store/Slices/mangaSlice';
 
 const step = 96;
 
-const Volumes = ({ mangaId }) => {
+const Volumes = ({ mangaId ,mangaInfo}) => {
     const [pages, setPages] = useState(1);
     const [currPage, setCurrPage] = useState(1);
     const [offset, setOffset] = useState(0);
@@ -32,7 +32,7 @@ const Volumes = ({ mangaId }) => {
         {
         mangaFeed.load.status === 'loading' ||  mangaFeed.load.status === '' ? <Spinner customStyle={{width: '50px', height: '50px'}} /> 
         :
-        <div className={styles.chapters}>
+        <div className={styles.chapters} >
             <div className={styles.controls_block}>
                 <input className="reg-button" type="button" value="Descending" />
                 <input className="reg-button" type="button" value="Collapse" />
@@ -41,12 +41,12 @@ const Volumes = ({ mangaId }) => {
                 {
                     mangaFeed?.data?.array?.map((volume, index) => {
                         return (
-                            <Volume key={Object.keys(volume)[0] + index} volume={volume} />
+                            <Volume key={Object.keys(volume)[0] + index} volume={volume} mangaInfo={mangaInfo}/>
                         )
                     })
                 }
             </div>
-            <div className="page-block">
+            <div className="page-block" >
                 {
                     mangaFeed.load.status === 'resolved' ?
                     <Pagination pages={pages} currPage={currPage} step={step} setOffset={setOffset} setCurrPage={setCurrPage} />

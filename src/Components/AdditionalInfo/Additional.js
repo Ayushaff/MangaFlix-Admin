@@ -18,7 +18,7 @@ const Additional = () => {
     }, [mangaInfo.load.status]);
 
     return (
-        <div style={{display: 'flex', flexWrap: 'wrap', width: '95%'}}>
+        <div style={{display: 'flex', flexWrap: 'wrap', width: '100%'}}>
             {
                 tagsArr?.map((tag, index) => <Keyvalues key={tag.name} tagObj={tag} />)
             }

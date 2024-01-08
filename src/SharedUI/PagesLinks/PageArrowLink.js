@@ -3,9 +3,11 @@ import styles from "./pages-links.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const PageArrowLink = memo(
   ({ title = "", link = "", arrowReDirection = false }) => {
+    const theme = useSelector((state)=>state.theme);
     const navigate = useNavigate();
     const linkClass = useMemo(
       () =>
@@ -25,7 +27,10 @@ const PageArrowLink = memo(
               <FontAwesomeIcon icon={faArrowRight} />
               <h3
                 style={{
-                  color: "white",
+                  color: theme.darkmode ? "white" : "black",
+                  borderBottom : "2px solid red",
+                  fontWeight : "bold",
+                  textTransform : "uppercase"
                 }}
               >
                 {title}
@@ -35,18 +40,22 @@ const PageArrowLink = memo(
             <>
               <h3
                 style={{
-                  color: "white",
+                  color: theme.darkmode ? "white" : "black",
+                  borderBottom : "2px solid red",
+                  fontWeight : "bold",
+                  textTransform : "uppercase"
                 }}
               >
                 {title}
               </h3>
               <div
                 style={{
-                  hoverColor: "white",
+                  color: theme.darkmode ? "white" : "black",
+                  
                 }}
               >
-                <p style={{color: "white"}}>View All </p>&nbsp;
-                <FontAwesomeIcon icon={faArrowRight} style={{color :"white"}} />
+                <p style={{color: theme.darkmode ? "white" : "black",}}>View All </p>&nbsp;
+                <FontAwesomeIcon icon={faArrowRight} style={{color: theme.darkmode ? "white" : "black",}} />
               </div>
             </>
           )}

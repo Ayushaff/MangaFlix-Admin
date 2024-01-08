@@ -28,6 +28,11 @@ const Header = memo(() => {
   const user = useSelector((state) => state.user.user);
   const theme = useSelector((state) => state.theme);
 
+  const handleSearch = () => {
+
+  }
+  
+  
   const handleModal = () => {
     setActive(true);
     dispatch(setMainStatus(false));
@@ -81,7 +86,7 @@ const Header = memo(() => {
                     </span>
                     <p>Search</p>
                 </div> */}
-          <div onClick={handleModal}>
+          <div onClick={()=> {handleAuthorized("titles")}}>
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </div>
           <div>
@@ -112,13 +117,13 @@ const Header = memo(() => {
           <SearchModal setActive={setActive} />
         </Modal>
 
-        <Modal
+        {/* <Modal
           active={logModal}
           setActive={setLogModal}
           styleModalContent={{ position: "fixed", top: "10%", right: "5%" }}
         >
           <LoginModal setActive={setLogModal} />
-        </Modal>
+        </Modal> */}
       </div>
       <div style={{
         backgroundColor: theme.colors.headbar,

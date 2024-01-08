@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './chapters.module.scss';
 import Chapters from './Chapters';
 
-const Volume = ({ volume }) => {
+const Volume = ({ volume , mangaInfo}) => {
     const [title, setTitle] = useState('');
     const [interval, setInterval] = useState([0, 0]);
     useEffect(() => {
@@ -23,7 +23,7 @@ const Volume = ({ volume }) => {
                 <p>{`Ch. ${interval[0]} - ${interval[1]}`}</p>
                 <p>{volume[title]?.length}</p>
             </div>
-            <Chapters volume={volume[title]} />
+            <Chapters volume={volume[title]} mangaInfo={mangaInfo}/>
         </div>
     );
 };

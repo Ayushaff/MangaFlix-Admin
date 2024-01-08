@@ -1,6 +1,7 @@
 .chapters {
-    height: 100%;
-    width: 100%;
+    //height: 100%;
+    margin: 0px 30px;
+    //width: 100%;
 }
 
 .controls_block {
@@ -11,7 +12,6 @@
 .content_block {
     padding-top: 15px;
     padding-bottom: 15px;
-
 }
 
 .volume_title {
@@ -22,7 +22,7 @@
         font-size: 14pt;
         color: #4f4f4f;
     }
-    
+
     margin-bottom: 0.5rem;
 }
 
@@ -39,14 +39,14 @@
     align-items: center;
     width: 100%;
     margin-left: 0.875rem;
-    
+
     border-left: 2px solid red;
 
     position: relative;
     background-color: transparent;
 
     &::after {
-        content: '';
+        content: "";
         height: 1px;
         background-color: red;
         width: 10px;
@@ -60,7 +60,7 @@
     height: 25%;
 
     &::after {
-        content: '';
+        content: "";
         height: 1px;
         background-color: red;
         width: 10px;
@@ -70,29 +70,37 @@
     }
 }
 
+.chapters_block_main {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    border: 2px solid #929292;
+    border-radius: 5px;
+}
+
 .chapters_block {
-    background-color: #f0f1f2;
     border-radius: 0.125rem;
     margin-bottom: 5px;
 
     .title {
-        padding-top: 0.25rem;
-        padding-bottom: 0.25rem;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
         cursor: pointer;
         display: flex;
         justify-content: space-between;
     }
 
     .content {
-        p, a {
+
+        p,
+        a {
             font-size: 11pt;
         }
 
         display: grid;
         grid-template-columns: 0.1fr 1fr 1.2fr 1fr 0.6fr;
-        
+
         div:not(.side_item.cnt) {
             padding: 0.2rem;
             padding-left: 0.5rem;
@@ -105,12 +113,12 @@
             padding-top: 0.25rem;
             padding-bottom: 0.25rem;
         }
-        
+
         border-bottom: 1px solid #e6e6e6;
         border-left: 2px solid rgb(113, 106, 254);
         border-top-left-radius: 2px;
         border-bottom-left-radius: 2px;
-    }   
+    }
 }
 
 .content_wrapp {
@@ -128,13 +136,17 @@
         margin-left: 8px;
     }
 
-    p, a {
+    p,
+    a {
         font-weight: bold;
     }
 }
 
-.user, .timestamp {
-    svg, img {
+.user,
+.timestamp {
+
+    svg,
+    img {
         max-width: 1rem;
         max-height: 1rem;
         color: #4d4d4d;
@@ -151,7 +163,7 @@
         grid-row: span 2;
         border-left: 3px solid red;
         border-color: #4d4d4d;
-        
+
         &::after {
             height: 2.5px;
             left: -2px;
@@ -182,8 +194,8 @@
             }
 
             .side_item {
-                padding-left: .1rem!important;
-                padding-right: 0px!important;
+                padding-left: 0.1rem !important;
+                padding-right: 0px !important;
             }
         }
     }
@@ -197,15 +209,15 @@
             }
 
             .side_item {
-                padding-left: .1rem!important;
-                padding-right: 0px!important;
-                margin-left: .5rem;
+                padding-left: 0.1rem !important;
+                padding-right: 0px !important;
+                margin-left: 0.5rem;
             }
 
-            .chapter_name, .user {
-                padding-right: 0px!important;
+            .chapter_name,
+            .user {
+                padding-right: 0px !important;
             }
-
         }
     }
 }
@@ -228,13 +240,14 @@
             }
 
             .side_item {
-                padding-left: .1rem!important;
-                padding-right: 0px!important;
-                margin-left: .4rem;
+                padding-left: 0.1rem !important;
+                padding-right: 0px !important;
+                margin-left: 0.4rem;
             }
 
-            .chapter_name, .user {
-                padding-right: 0px!important;
+            .chapter_name,
+            .user {
+                padding-right: 0px !important;
             }
         }
     }

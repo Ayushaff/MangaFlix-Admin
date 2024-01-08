@@ -14,16 +14,24 @@ import MDLists from './Pages/MDLists/MDLists';
 import CreateList from './Pages/CreateList/CreateList';
 import themeSlice from './Store/Slices/themeSlice';
 import { useSelector } from 'react-redux';
+import Footer from './Components/Footer/Footer';
 
 const App = () => {
   const theme=useSelector((state)=>state.theme)
   return (
     <div className="App" style={{
       backgroundColor: theme.colors.body,
+      
     }}>
+      
       <Router>
       <Header />
-      <div className="content__wrap">
+      <div style={{
+        display : "flex",
+        flexDirection : "column",
+        justifyContent : "space-between"
+      }}>
+      <div className="content__wrap" >
         <SideMenu options={{menuType: 'main'}}>
           <SideMain />
         </SideMenu>
@@ -46,6 +54,9 @@ const App = () => {
           
           <Route path='*' element={<Main />} />
         </Routes>
+        
+      </div>
+      <Footer ></Footer>
       </div>
       </Router>
     </div>

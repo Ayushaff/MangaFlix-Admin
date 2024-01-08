@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   colors: {
     header: "#ebfbff",
-    body: "#BDE4E4",
+    body: "#CAE7F6",
     footer: "#003333",
     titleBar : "#DDDDDD",
     buttonColor : "#D2EDED",
@@ -28,7 +28,7 @@ const themeSlice = createSlice({
     },
     setDefaultTheme(state) {
       state.colors.header = "#ebfbff";
-      state.colors.body = "#BDE4E4";
+      state.colors.body = "#CAE7F6";
       state.darkmode = false;
       state.colors.titleBar = "#DDDDDD";
       state.colors.buttonColor = "#D2EDED";

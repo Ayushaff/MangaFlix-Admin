@@ -112,17 +112,19 @@ const Titles = memo(({ hasFilter = true, customTitle = '', handleManga }) => {
 			mainClasses={styles.wrapp}
 			containerClasses={styles.container}
 			isHeaderBlack
+			pageTitle = {pageTitle}
 		>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>Manga | Searching</title>
 				<meta name="description" content={`MangaDex manga searching}`} />
 			</Helmet>
-			<PageArrowLink
+			{/* <PageArrowLink
 				title={customTitle ? customTitle : pageTitle}
 				link=""
 				arrowReDirection
-			/>
+			/> */}
+			<div style={{height : "10px"}}/>
 			{pageTitle === 'Advanced Search' ? (
 				<FilterTitles
 					tags={groupedTags}
@@ -153,12 +155,12 @@ const ComponentByStatus = memo(
 			case 'resolved':
 				return (
 					<Cards mangasArr={filteredManga.data} handleManga={handleManga}>
-						<Select
+						{/* <Select
 							values={sortValues}
 							selected={selected}
 							setSelected={setSelected}
 							selectTitle="Sort By"
-						/>
+						/> */}
 					</Cards>
 				);
 			case 'error':

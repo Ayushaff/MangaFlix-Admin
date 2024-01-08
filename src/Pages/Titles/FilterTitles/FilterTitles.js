@@ -57,13 +57,16 @@ const FilterTitles = memo(({ tags = [], hasFilter = true }) => {
                     {...filterInput} 
                 />
             </div>
-            {hasFilter 
+            
+
+            {/* filter */}
+            {/* {true 
                 ? <div onClick={handleModal} style={{cursor: 'pointer'}} >
                       <svg data-v-20f285ec="" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-icon-black dark:text-icon-white text-false icon" data-v-6b3fd699=""><path data-v-20f285ec="" d="M22 3H2l8 9.46V19l4 2v-8.54L22 3Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                       <p>Filter</p>
                   </div>
                 : null
-            }
+            } */}
         </div>
         
         <Modal active={active} setActive={setActive} styleModalContent={{width: '87vw', borderRadius: '0px'}} >

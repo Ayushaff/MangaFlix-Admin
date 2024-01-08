@@ -13,10 +13,10 @@ const Logo = ({ handleMenu, ico ,color = 'black'}) => {
                     ? <MenuLinesIco onClick={handleMenu} />
                     : <MenuCrossIco onClick={handleMenu} /> 
                   }
-                  <Link to={"/"}><h1 style={{color: color}}>MANGAFLIX</h1></Link>
+                  <Link to={"/"}><h2 style={{color: color}}>MANGAFLIX</h2></Link>
                   </>
                 : <>
-                  <Link to={"/"}><h1 style={{color: color}}>MANGAFLIX</h1></Link>
+                  <Link to={"/"}><h2 style={{color: color}}>MANGAFLIX</h2></Link>
                   { ico.type === 'close'
                     ? <MenuCrossIco onClick={handleMenu} />
                     : <MenuLinesIco onClick={handleMenu} /> 

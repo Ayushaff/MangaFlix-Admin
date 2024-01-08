@@ -2,12 +2,13 @@ import { memo, useEffect } from 'react';
 import { useObserver } from '../../Hooks/observer';
 import { useDispatch, useSelector } from 'react-redux';
 
-const MainContainer = memo(({ children, mainClasses = '', containerClasses = '', isHeaderBlack = false }) => {
+const MainContainer = memo(({ children, mainClasses = '', containerClasses = '', isHeaderBlack = false , pageTitle = '',}) => {
     const [observerStatus, setObserverRef] = useObserver({threshold: 0});
     const theme = useSelector((state) => state.theme);
     useEffect(() => {
         const headerPlug = document.querySelector('.header-plug');
-        setObserverRef(headerPlug);        
+        setObserverRef(headerPlug);
+        //console.log("---->"+pageTitle);
     }, []);
 
     useEffect(() => {
@@ -49,9 +50,15 @@ const MainContainer = memo(({ children, mainClasses = '', containerClasses = '',
 
     return (
         <main className={mainClasses} style={{
-            backgroundColor : theme.colors.body,
+            
+
+            background : pageTitle === "Advanced Search" ? "linear-gradient(180deg, "+theme.colors.trendingManga+" 160px, "+theme.colors.body+" 160px, "+theme.colors.body+" 100%)":
+            pageTitle === "Suggestions" ? "linear-gradient(180deg, "+theme.colors.trendingManga+" 420px, "+theme.colors.body+" 420px, "+theme.colors.body+" 100%)" 
+            : "linear-gradient(180deg, "+theme.colors.trendingManga+" 400px, "+theme.colors.body+" 400px, "+theme.colors.body+" 100%)",
         }}>
+            
             <div className={containerClasses} >
+            
                 { children }
             </div>
         </main>

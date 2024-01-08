@@ -16,12 +16,41 @@
 }
 
 .suggest-item {
-    width: 100%;
+    display: block;
+    // width: 100%;
     //margin-top: 30px;
 }
 
 .suggest-item-content {
-    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    flex-wrap: wrap;
+    // width: 100%;
+}
+
+.latest-releases {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 10px 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.trending {
+    height: 320px;
+    //background-color: blue;
+    justify-content: center;
+    margin: 0px 5%;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+
 }
 
 @media (max-width: 340px) {

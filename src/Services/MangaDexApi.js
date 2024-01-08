@@ -212,6 +212,8 @@ class MangaDexApi {
 	getLatestUpdateMangas = async (mangasIds) => {
 		try {
 			const ids = mangasIds.reduce((accu, curr) => accu + curr, '');
+			// console.log(`${this.BaseManga}?includes[]=cover_art${ids}&limit=24&contentRating[]=safe&contentRating[]=suggestive&contentRating[]=erotica&contentRating[]=pornographic`);
+			
 			return await fetch(
 				`${this.BaseManga}?includes[]=cover_art${ids}&limit=24&contentRating[]=safe&contentRating[]=suggestive&contentRating[]=erotica&contentRating[]=pornographic`
 			);
