@@ -1,3 +1,39 @@
+.chapter-button1,
+.chapter-button2 {
+  position: relative;
+  background-color: black;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.chapter {
+  position: absolute;
+  width: 66.09px;
+  height: 16.5px;
+  left: 12px;
+  top: calc(50% - 16.5px / 2);
+}
+
+.chapter-button1 .chapter,
+.chapter-button2 .chapter {
+  position: absolute;
+  width: 67.21px;
+  height: 16px;
+  left: 0;
+  top: 0;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+}
 .manga-img {
     width: 93px;
     overflow: hidden;

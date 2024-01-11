@@ -140,12 +140,13 @@ const ChooseCardViewType = ({ handleManga, type, manga, mangaInfo, mangaStatisti
         )
         case 'blocks': return (
             <Cover
-                src={`https://uploads.mangadex.org/covers/${mangaInfo?.data?.id}/${filterSomeAttribute(mangaInfo?.data?.relationships, 'cover_art', 'fileName')}`}
+                // src={`https://uploads.mangadex.org/covers/${mangaInfo?.data?.id}/${filterSomeAttribute(mangaInfo?.data?.relationships, 'cover_art', 'fileName')}`}
+                src={`https://uploads.mangadex.org/covers/${mangaInfo?.id}/${filterSomeAttribute(mangaInfo?.relationships, 'cover_art', 'fileName')}`} 
                 alt={''}
                 stylesList={{height: '360px', width: '250px'}}
                 classLists={{wrapp: styles.alt_wrapp_settings, img: styles.img_settings}}
             >
-                <span><p>{mangaInfo?.data?.attributes?.title?.en}</p></span>
+                <span><p>{mangaInfo?.title}</p></span>
             </Cover>
         )
         default: return <></>

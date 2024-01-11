@@ -13,12 +13,14 @@
     padding-bottom: 45px;
     height: 100%;
     justify-self: flex-start;
+    
 }
 
 .suggest-item {
     display: block;
     // width: 100%;
     //margin-top: 30px;
+    // margin-bottom: 40px;
 }
 
 .suggest-item-content {
@@ -26,6 +28,8 @@
     flex-direction: row;
     overflow: hidden;
     flex-wrap: wrap;
+    // margin-bottom: 40px;
+    
     // width: 100%;
 }
 

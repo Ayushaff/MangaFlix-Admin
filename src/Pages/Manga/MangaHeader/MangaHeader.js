@@ -99,23 +99,40 @@ const MangaTitle = memo(({ mangaInfo }) => {
         <div>
           <p
             className="main-title"
-            style={{ color: theme.darkmode ? "white" : "black" }}
+            style={{
+              color: theme.darkmode ? "white" : "black",
+              fontFamily: "Fira Sans",
+              fontWeight: "800",
+              fontSize: 29,
+            }}
           >
             {enTitle}
           </p>
+
           <p
             className="second-title"
-            style={{ color: theme.darkmode ? "white" : "black" }}
+            style={{
+              color: theme.darkmode ? "white" : "black",
+              fontFamily: "Fira Sans",
+              fontWeight: "600",
+              fontSize: 17,
+              wordWrap: "break-word",
+            }}
           >
             {alternative}
           </p>
         </div>
         {/* <MangaStatistics statistics={{}} /> */}
       </div>
+      &nbsp;
       <div
         style={{
           height: "140px",
           overflow: "auto",
+          color: "#6D6D6D",
+          fontSize: 16,
+          fontFamily: "Fira Sans",
+          fontWeight: "400",
         }}
       >
         {mangaInfo?.data?.attributes?.description?.en}
@@ -128,24 +145,115 @@ const MangaTitle = memo(({ mangaInfo }) => {
           margin: "30px 20px",
         }}
       >
-        <div style={{ display: "flex", flexDirection: "column" ,marginRight :"50px"}}>
-          <div style={{ display: "flex", flexDirection: "column"}}>
-            <p style={{color : theme.darkmode ? "white" : "black",}}><b>Updated On</b></p>
-            <p style={{color : theme.darkmode ? "white" : "black",}}>Jan 4, 2024</p>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            marginRight: "50px",
+          }}
+        >
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <p
+              style={{
+                color: theme.darkmode ? "white" : "black",
+                fontFamily: "Fira Sans",
+                fontWeight: "300",
+                fontSize: 17,
+                wordWrap: "break-word",
+              }}
+            >
+              <b>Updated On</b>
+            </p>
+
+            <p
+              style={{
+                color: theme.darkmode ? "white" : "black",
+                fontFamily: "Fira Sans",
+                fontWeight: "400",
+                fontSize: 16,
+                wordWrap: "break-word",
+              }}
+            >
+              Jan 4, 2024
+            </p>
           </div>
-          <div style={{ display: "flex", flexDirection: "column"}}>
-            <p style={{color : theme.darkmode ? "white" : "black",}}><b>Author</b></p>
-            <p style={{color : theme.darkmode ? "white" : "black",}}>Gege Akutami</p>
+
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <p
+              style={{
+                color: theme.darkmode ? "white" : "black",
+                fontFamily: "Fira Sans",
+                fontWeight: "300",
+                fontSize: 17,
+                wordWrap: "break-word",
+              }}
+            >
+              <b>Author</b>
+            </p>
+
+            <p
+              style={{
+                color: theme.darkmode ? "white" : "black",
+                fontFamily: "Fira Sans",
+                fontWeight: "400",
+                fontSize: 16,
+                wordWrap: "break-word",
+              }}
+            >
+              Gege Akutami
+            </p>
           </div>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
-        <div style={{ display: "flex", flexDirection: "column"}}>
-            <p style={{color : theme.darkmode ? "white" : "black",}}><b>Artist</b></p>
-            <p style={{color : theme.darkmode ? "white" : "black",}}>Nagi</p>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <p
+              style={{
+                color: theme.darkmode ? "white" : "black",
+                fontFamily: "Fira Sans",
+                fontWeight: "300",
+                fontSize: 17,
+                wordWrap: "break-word",
+              }}
+            >
+              <b>Artist</b>
+            </p>
+
+            <p
+              style={{
+                color: theme.darkmode ? "white" : "black",
+                fontFamily: "Fira Sans",
+                fontWeight: "400",
+                fontSize: 16,
+                wordWrap: "break-word",
+              }}
+            >
+              Nagi
+            </p>
           </div>
-          <div style={{ display: "flex", flexDirection: "column"}}>
-            <p style={{color : theme.darkmode ? "white" : "black",}}><b>Posted On</b></p>
-            <p style={{color : theme.darkmode ? "white" : "black",}}>May 17, 2024</p>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <p
+              style={{
+                color: theme.darkmode ? "white" : "black",
+                fontFamily: "Fira Sans",
+                fontWeight: "300",
+                fontSize: 17,
+                wordWrap: "break-word",
+              }}
+            >
+              <b>Posted On</b>
+            </p>
+
+            <p
+              style={{
+                color: theme.darkmode ? "white" : "black",
+                fontFamily: "Fira Sans",
+                fontWeight: "400",
+                fontSize: 16,
+                wordWrap: "break-word",
+              }}
+            >
+              May 17, 2024
+            </p>
           </div>
         </div>
       </div>
@@ -194,7 +302,17 @@ const MangaVariablesStatus = memo(({ mangaInfo = {} }) => {
         }}
       >
         <p>
-          <b>Genres</b>
+          <b
+            style={{
+              color: "#333333",
+              fontFamily: "Fira Sans",
+              fontWeight: "600",
+              fontSize: 17,
+              wordWrap: "break-word",
+            }}
+          >
+            Genres
+          </b>
         </p>
       </div>
       <TagsStatus tags={tags} amount={20} />
@@ -240,6 +358,11 @@ const Bookmark = () => {
           backgroundColor: "#BDE4E4",
           padding: "10px 20px",
           borderRadius: "5px",
+          color: "#0D0D0D",
+          fontSize: 16,
+          fontFamily: "Fira Sans",
+          fontWeight: "500",
+          wordWrap: "break-word",
         }}
       >
         Bookmark
@@ -258,10 +381,15 @@ const BlackButtons = () => {
           backgroundColor: "#343434",
           padding: "6px 20px",
           borderRadius: "5px",
+          fontSize: 16,
+          fontFamily: "Fira Sans",
+          fontWeight: "400",
+          wordWrap: "break-word",
         }}
       >
         <p>Ratings</p>
       </button>
+
       <button
         style={{
           margin: "4px 10px",
@@ -277,8 +405,29 @@ const BlackButtons = () => {
             justifyContent: "space-between",
           }}
         >
-          <p style={{ color: "#B8B8B8" }}>Status</p>
-          <p style={{ color: "#B8B8B8" }}>Ongoing</p>
+          <p
+            style={{
+              color: "#B8B8B8",
+              fontSize: 16,
+              fontFamily: "Fira Sans",
+              fontWeight: "500",
+              wordWrap: "break-word",
+            }}
+          >
+            Status
+          </p>
+
+          <p
+            style={{
+              color: "#B8B8B8",
+              fontSize: 16,
+              fontFamily: "Fira Sans",
+              fontWeight: "500",
+              wordWrap: "break-word",
+            }}
+          >
+            Ongoing
+          </p>
         </div>
       </button>
       <button
@@ -296,8 +445,29 @@ const BlackButtons = () => {
             justifyContent: "space-between",
           }}
         >
-          <p style={{ color: "#B8B8B8" }}>Type</p>
-          <p style={{ color: "#B8B8B8" }}>Manga</p>
+          <p
+            style={{
+              color: "#B8B8B8",
+              fontSize: 16,
+              fontFamily: "Fira Sans",
+              fontWeight: "400",
+              wordWrap: "break-word",
+            }}
+          >
+            Type
+          </p>
+
+          <p
+            style={{
+              color: "white",
+              fontSize: 16,
+              fontFamily: "Fira Sans",
+              fontWeight: "400",
+              wordWrap: "break-word",
+            }}
+          >
+            Manga
+          </p>
         </div>
       </button>
     </>

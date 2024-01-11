@@ -28,11 +28,8 @@ const Header = memo(() => {
   const user = useSelector((state) => state.user.user);
   const theme = useSelector((state) => state.theme);
 
-  const handleSearch = () => {
+  const handleSearch = () => {};
 
-  }
-  
-  
   const handleModal = () => {
     setActive(true);
     dispatch(setMainStatus(false));
@@ -86,7 +83,11 @@ const Header = memo(() => {
                     </span>
                     <p>Search</p>
                 </div> */}
-          <div onClick={()=> {handleAuthorized("titles")}}>
+          <div
+            onClick={() => {
+              handleAuthorized("titles");
+            }}
+          >
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </div>
           <div>
@@ -101,8 +102,11 @@ const Header = memo(() => {
               <button
                 className="button1"
                 style={{
-                  backgroundColor : theme.colors.buttonColor,
-                  color : theme.darkmode ? "white" : "black",
+                  backgroundColor: theme.colors.buttonColor,
+                  color: theme.darkmode ? "white" : "black",
+                  fontSize: 15,
+                  fontFamily: "Montserrat",
+                  fontWeight: 600
                 }}
                 onClick={() => handleAuthorized("singin")}
               >
@@ -125,42 +129,65 @@ const Header = memo(() => {
           <LoginModal setActive={setLogModal} />
         </Modal> */}
       </div>
-      <div style={{
-        backgroundColor: theme.colors.headbar,
-        color : theme.darkmode ? "white" : "black",
-        paddingLeft: "50px",
-        paddingRight: "50px",
-        paddingTop: "10px",
-        paddingBottom: "10px",
-        fontSize : "15px"
-      }}>
-        <Link to="/" style={{color : theme.darkmode ? "white" : "black",}}>HOME</Link>
+      <div
+        style={{
+          backgroundColor: theme.colors.headbar,
+          color: theme.darkmode ? "white" : "black",
+          paddingLeft: "50px",
+          paddingRight: "50px",
+          paddingTop: "10px",
+          paddingBottom: "10px",
+          fontSize: "15px",
+        }}
+      >
+        <Link
+          to="/"
+          style={{
+            color: theme.darkmode ? "white" : "black",
+            fontSize: 14,
+            fontFamily: "Montserrat",
+            fontWeight: 700
+          }}
+        >
+          Home
+        </Link>
+
         <Link
           to="/"
           style={{
             marginLeft: "50px",
-            color : theme.darkmode ? "white" : "black",
-          }} 
+            color: theme.darkmode ? "white" : "black",
+            fontSize: 14,
+            fontFamily: "Montserrat",
+            fontWeight: 700
+          }}
         >
-          LIBRARY
+          Library
+        </Link>
+
+        <Link
+          to="/"
+          style={{
+            marginLeft: "50px",
+            color: theme.darkmode ? "white" : "black",
+            fontSize: 14,
+            fontFamily: "Montserrat",
+            fontWeight: 700
+          }}
+        >
+          Reading History
         </Link>
         <Link
           to="/"
           style={{
             marginLeft: "50px",
-            color : theme.darkmode ? "white" : "black",
+            color: theme.darkmode ? "white" : "black",
+            fontSize: 14,
+            fontFamily: "Montserrat",
+            fontWeight: 700
           }}
         >
-          READING HISTORY
-        </Link>
-        <Link
-          to="/"
-          style={{
-            marginLeft: "50px",
-            color : theme.darkmode ? "white" : "black",
-          }}
-        >
-          RECENTLY ADDED
+          Recently Added
         </Link>
       </div>
       {/* <div

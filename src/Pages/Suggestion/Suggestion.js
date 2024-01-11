@@ -60,6 +60,7 @@ const Suggestion = memo(() => {
       </Helmet>
 
       <div style={{margin: "0px 10%",marginTop: "10px"}}><SuggestItem title="Trending Manga" link="titles/seasonal" ></SuggestItem></div>
+
       <div className="trending">
         {
           manga.length == 0 ?

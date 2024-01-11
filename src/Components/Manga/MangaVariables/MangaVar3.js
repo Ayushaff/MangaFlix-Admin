@@ -38,7 +38,19 @@ const MangaVar3 = ({ manga, mangaCover }) => {
                 </div> */}
         </div>
         <div className="manga-de-var3">
-          <p style={{color : theme.darkmode ? "white" : "black", overflow : "hidden",whiteSpace : "nowrap",textOverflow : "ellipsis"}}>{manga.attributes.title.en}</p>
+        <p
+            style={{
+              color: theme.darkmode ? "white" : "black" ,
+              fontSize: 15,
+              fontFamily: "Poppins",
+              fontWeight: 500,
+              overflow: "hidden",
+              whiteSpace: "nowrap",
+              textOverflow: "ellipsis",
+            }}
+          >
+            {manga.attributes.title.en}
+          </p>
         </div>
       </div>
       <Rating  name="haf-rating" precision={0.5} size="small" value={value} readOnly />

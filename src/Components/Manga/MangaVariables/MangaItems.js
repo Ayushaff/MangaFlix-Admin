@@ -16,7 +16,7 @@ const MangaItems = ({mangas = [], Variant, Wrapp = true, styles = {}}) => {
     }, [mangas]);
 
     return (
-        mangas?.map((item) => (
+        mangas?.map((item) => ( 
             <Wrapp key={item.id} styles={styles} manga={item}>
                 <Variant manga={item} mangaCover={mangaListCovers[item.id]}/>
             </Wrapp>

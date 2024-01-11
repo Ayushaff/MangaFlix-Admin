@@ -2,6 +2,23 @@
     display: flex;
     align-items: center;
 
+    h2 {
+        cursor: pointer;
+        font-size: 16px;
+        font-family: 'Montserrat';
+        font-weight: 600;
+        line-height: 18px;
+        word-wrap: break-word;
+        margin-right: 10px;
+        margin-top: 2px;
+        border-radius: 50%;
+
+        &:hover {
+            background-color: rgba(235, 235, 235, 0.7); // Equivalent to #ebebeb
+            transition: 0.6s all ease-in-out;
+        }
+    }
+
     svg {
         cursor: pointer;
         width: 22px;
@@ -11,17 +28,17 @@
         margin-right: 10px;
         margin-top: 2px;
         border-radius: 50%;
-    }
 
-    svg:hover {
-        background-color: rgba($color: #ebebeb, $alpha: 0.7);
-        transition: 0.6s all ease-in-out;
+        &:hover {
+            background-color: rgba(235, 235, 235, 0.7); // Equivalent to #ebebeb
+            transition: 0.6s all ease-in-out;
+        }
     }
 }
 
 .logo_side_main {
     &:hover {
-        h1 {
+        h2 {
             color: red;
             transition: 0.4s all;
         }
@@ -30,9 +47,9 @@
     svg {
         margin-right: 0px;
         margin-left: 10px;
-    }
-    
-    svg:hover {
-        background-color: rgba($color: #b4b9be, $alpha: 0.4);
+
+        &:hover {
+            background-color: rgba(180, 185, 190, 0.4); // Equivalent to #b4b9be
+        }
     }
 }
