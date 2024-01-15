@@ -60,7 +60,8 @@ const FilterItems = ({ items = [], isSpecific = false, type = '' }) => {
 
     return (
         <>
-        <h3>{strToUpper(type)}</h3>
+        {/* <h3>{strToUpper(type)}</h3> */}
+        
         <div style={{display: 'flex', flexWrap: 'wrap', alignItems: 'center'}}>
             {items?.map((item, index) => (
                 <FilterItemsViev key={item?.attributes?.name?.en ?? item} title={item?.attributes?.name?.en ?? item} id={item?.id} handleClick={handleClick} />

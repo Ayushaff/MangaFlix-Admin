@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './app.scss';
 
 import Header from './Components/Header/Header';
-import { Main, Favorites, Manga, Chapter, Signup, Signin, Suggestion } from './Pages';
+import { Main, Favorites, Manga, Chapter, Signup, Signin, Suggestion, About } from './Pages';
 
 import SideMenu from './Features/SideMenu/SideMenu';
 import SideMain from './Components/SideMain/SideMain';
@@ -53,7 +53,7 @@ const App = () => {
           <Route path='/lists' element={<MDLists />} />
 
           <Route path='/create/list' element={<CreateList />} />
-          <Route path='/aboutus' element={<CreateList />} />
+          <Route path='/about' element={<About />} />
 
           
           <Route path='*' element={<Main />} />

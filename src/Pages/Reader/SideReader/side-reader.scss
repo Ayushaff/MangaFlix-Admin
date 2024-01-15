@@ -1,7 +1,7 @@
 .side-chapter-wrapp {
     min-width: 300px!important;
-    display: grid;
-    grid-template-rows: 0.2fr 0.2fr 1fr;
+    // display: grid;
+    // grid-template-rows: 0.2fr 0.2fr 1fr;
     gap: 10px;
     margin-right: 10px;
 }
@@ -47,10 +47,13 @@
 }
 
 .side-chapter-controls {
-    display: grid;
+    background-color: #9ec8b9;
+    display: flex;
     flex-direction: column;
+    top:30px;
     min-width: 100%;
     gap: 15px;
+    height: 360px;
 }
 
 .side-ch-control-page, .side-ch-control-chapter {
@@ -61,3 +64,65 @@
 .sd-ch-links {
     flex-direction: column;
 }
+
+.sideCover{
+    top:20px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.sideCover img{
+    position: relative;
+    left: 20px;
+    height: 180px;
+    width: 130px;
+}
+.sideCover p{
+    top: 30px;
+}
+.ok{
+    position: relative;
+    top:20px;
+}
+
+.vertical {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    width:240px;
+    height: 40px;
+    background-color: lightblue;
+    border: 1px solid #000; 
+    border-radius: 5px; 
+    font-family: "Fira Sans";
+    font-weight:300;
+    color: white;
+    svg{
+        margin-right: 10px;
+        margin-left: 15px;
+    }
+  }
+  
+  .single {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+ 
+    width:240px;
+    height: 40px;
+
+    background-color: lightblue;
+    border: 1px solid #000; 
+    border-radius: 5px; 
+
+    font-family: "Fira Sans";
+    font-weight: 300;
+    color: white;
+    svg{
+        margin-right: 10px;
+        margin-left: 15px;
+    }
+  }
+  

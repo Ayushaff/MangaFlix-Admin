@@ -90,6 +90,7 @@ const Cards = memo(({ mangasArr, handleManga, children }) => {
             <div className={styles.controls_wrapp}>
                 { children }
                 <CardControls setRefControls={setRefControls} handleControls={handleControls} />
+                
             </div>
             <div ref={setRefContent} className={styles.content}>
                 {loading 

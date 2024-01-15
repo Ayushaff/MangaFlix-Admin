@@ -63,9 +63,9 @@ const FilterModal = ({ tags = [], setActive }) => {
     
     return (
         <div className={styles.modal_wrapp}>
-            <h1>Filters</h1>
+            <h1 style={{fontFamily:"Fira Sans"}}>Filters</h1>
             <div className={styles.applied}>
-                <p style={{marginBottom: '10px'}}>Applied Filters</p>
+                <p style={{marginBottom: '10px',fontFamily:"Fira Sans" ,fontSize:"15pt" ,fontWeight:"bold"}}>Applied Filters</p>
                 <div style={{display: 'flex', flexWrap: 'wrap'}}>
                     {selectedTags?.map(tag => (
                         tag.tags.map(item => {
@@ -89,10 +89,10 @@ const FilterModal = ({ tags = [], setActive }) => {
             </div>
             <hr style={{margin: '0.25rem 0px', borderTop: '1px solid #e5e7eb'}}></hr>
             <div className={styles.select}>
-                {/* <p>Original Language</p> */}
+                <p>Genres</p>
             </div>
-            <Tags tags={specificTags} isFlexBox />
-            <Tags tags={tags} />
+            {/* <Tags tags={specificTags} isFlexBox /> */}
+            <Tags tags={tags}  />
         </div>
     );
 };

@@ -1,4 +1,4 @@
-.wrapp {
+    .wrapp {
     width: 100%;
     height: 100%;
     display: grid;
@@ -13,6 +13,9 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1rem;
+    align-items: flex-start; 
+    position: relative;
+    top:5px;
 }
 
 .controls {
@@ -110,11 +113,15 @@
 .title {
     display: flex;
     justify-content: space-between;
-
+    font-family: "Fira Sans";
     &:nth-child(1) {
         font-size: 14pt;
         font-weight: 800;
     }
+}
+.main_title{
+    font-size: 14pt;
+    font-family: "Fira Sans";
 }
 
 .manganame {
@@ -423,6 +430,9 @@
     .controls_wrapp {
         display: flex;
         flex-direction: column;
+        justify-content: flex-end; /* Move controls to the right side */
+    align-items: flex-start; /* Move controls upward */
+    right: 50px;
     }
 }
 

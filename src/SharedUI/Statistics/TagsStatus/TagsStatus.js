@@ -20,6 +20,7 @@ const TagsStatus = ({ tags, amount, customStyles = {} }) => {
                             <span 
                                 className={styles[colorage((el?.attributes?.name?.en).toUpperCase())]}
                                 style={customStyles} 
+                                
                                 key={el?.attributes?.name?.en}> 
                                     {el?.attributes?.name?.en}
                             </span>

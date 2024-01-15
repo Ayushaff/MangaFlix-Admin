@@ -12,15 +12,19 @@
 
     div {
         display: flex;
+        svg{
+            margin-right: 5px;
+        }
         p {
-            font-size: 15pt; 
-            margin-left: 10px;
+            font-size: 17pt; 
+            font-weight: 300;
+            font-family: "Fira Sans";
         }
     }
 }
 
 .modal_wrapp {
-    display: grid; 
+    // display: grid; 
     gap: 1rem;
 
     h1 {
@@ -55,7 +59,7 @@
 
 .first_button {
     border-radius: 0.25rem;
-    // background-color: #ff6740;
+    background-color: #ff6740;
 
     button {
         color: white;
@@ -65,9 +69,10 @@
 .second_button {
     color: black;
     border-radius: 0.25rem;
-    background-color: transparent;
+    background-color: wheat;
     transition: background-color 0.2s ease;
-
+    font-family: "Fira Sans";
+    
     &:hover {
         background-color: rgba($color: #f0f1f2, $alpha: 1);
     }
@@ -100,7 +105,7 @@
         }
     }
 }
-
+  
 @media (max-width: 440px) {
     .first_button, .second_button {
         button {

@@ -13,7 +13,7 @@
 }
 
 .red, .orange {
-    color: white;
+    color: black;
 }
 
 .default {
@@ -24,7 +24,6 @@
 .manga_tags {
     display: flex;
     flex-wrap: wrap;
-
     span:not(.manga-status-span) {
         display: inline-block;
         border-radius: .25rem;
@@ -37,7 +36,6 @@
         text-transform: uppercase;
         font-weight: 100;
         margin-bottom: 5px;
-        
         color: white;
     font-size: 12px;
     font-family: 'Fira Sans';
@@ -49,6 +47,7 @@
 @media (max-width: 600px) {
     .manga_tags span {
         font-size: 7pt!important;
+
     }
 }
 

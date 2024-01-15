@@ -381,7 +381,7 @@ const BlackButtons = () => {
           backgroundColor: "#343434",
           padding: "6px 20px",
           borderRadius: "5px",
-          fontSize: 16,
+          fontSize: 12,
           fontFamily: "Fira Sans",
           fontWeight: "400",
           wordWrap: "break-word",
@@ -408,7 +408,7 @@ const BlackButtons = () => {
           <p
             style={{
               color: "#B8B8B8",
-              fontSize: 16,
+              fontSize: 12,
               fontFamily: "Fira Sans",
               fontWeight: "500",
               wordWrap: "break-word",
@@ -420,7 +420,7 @@ const BlackButtons = () => {
           <p
             style={{
               color: "#B8B8B8",
-              fontSize: 16,
+              fontSize: 12,
               fontFamily: "Fira Sans",
               fontWeight: "500",
               wordWrap: "break-word",
@@ -448,7 +448,7 @@ const BlackButtons = () => {
           <p
             style={{
               color: "#B8B8B8",
-              fontSize: 16,
+              fontSize: 12,
               fontFamily: "Fira Sans",
               fontWeight: "400",
               wordWrap: "break-word",
@@ -460,7 +460,7 @@ const BlackButtons = () => {
           <p
             style={{
               color: "white",
-              fontSize: 16,
+              fontSize: 12,
               fontFamily: "Fira Sans",
               fontWeight: "400",
               wordWrap: "break-word",
