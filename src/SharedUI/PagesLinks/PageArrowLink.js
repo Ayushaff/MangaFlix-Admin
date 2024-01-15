@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 
 const PageArrowLink = memo(
   ({ title = "", link = "", arrowReDirection = false }) => {
-    const theme = useSelector((state)=>state.theme);
+    const theme = useSelector((state) => state.theme);
     const navigate = useNavigate();
     const linkClass = useMemo(
       () =>
@@ -27,10 +27,10 @@ const PageArrowLink = memo(
               <FontAwesomeIcon icon={faArrowRight} />
               <h3
                 style={{
-                  color: theme.darkmode ? "white" : "black",
-                  borderBottom : "2px solid red",
-                  fontWeight : "bold",
-                  textTransform : "uppercase"
+                  color: theme.darkmode ? "black" : "white",
+                  borderBottom: "2px solid red",
+                  fontWeight: "bold",
+                  textTransform: "uppercase",
                 }}
               >
                 {title}
@@ -41,21 +41,30 @@ const PageArrowLink = memo(
               <h3
                 style={{
                   color: theme.darkmode ? "white" : "black",
-                  borderBottom : "2px solid red",
-                  fontWeight : "bold",
-                  textTransform : "uppercase"
+                  fontSize: 18,
+                  fontFamily: "Poppins",
+                  fontWeight: 800,
+                  textTransform: "uppercase",
+                  wordWrap: "break-word",
+                  borderBottom: "2px solid red",
                 }}
               >
                 {title}
               </h3>
+
               <div
                 style={{
                   color: theme.darkmode ? "white" : "black",
-                  
                 }}
               >
-                <p style={{color: theme.darkmode ? "white" : "black",}}>View All </p>&nbsp;
-                <FontAwesomeIcon icon={faArrowRight} style={{color: theme.darkmode ? "white" : "black",}} />
+                <p style={{ color: theme.darkmode ? "white" : "black" }}>
+                  View All{" "}
+                </p>
+                &nbsp;
+                <FontAwesomeIcon
+                  icon={faArrowRight}
+                  style={{ color: theme.darkmode ? "white" : "black" }}
+                />
               </div>
             </>
           )}

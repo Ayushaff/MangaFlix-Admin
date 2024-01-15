@@ -12,9 +12,9 @@ const Img = ({ src = '', alt = '', classes = '', height, width, draggable = true
         img.onload = () => {
             setIsLoading(false);
         }
-        // img.onerror = () => {
-        //     setIsLoading(false);
-        // }
+        img.onerror = () => {
+            setIsLoading(false);
+        }
     }, [src]);
 
     const shadowSetting = useMemo(() => ({boxShadow: '0px 0px 30px 2px rgba(34, 60, 80, 0.12)'}), [])

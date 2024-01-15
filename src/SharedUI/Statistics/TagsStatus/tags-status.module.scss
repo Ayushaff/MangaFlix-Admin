@@ -13,7 +13,7 @@
 }
 
 .red, .orange {
-    color: white;
+    color: black;
 }
 
 .default {
@@ -24,12 +24,9 @@
 .manga_tags {
     display: flex;
     flex-wrap: wrap;
-
     span:not(.manga-status-span) {
         display: inline-block;
         border-radius: .25rem;
-        font-size: 10pt;
-        font-weight: 400;
         padding: 1px;
         padding-left: 5px;
         padding-right: 5px;
@@ -37,15 +34,20 @@
         display: inline-block;
         line-height: .9375rem;
         text-transform: uppercase;
-        font-size: .625rem;
-        font-weight: 700;
+        font-weight: 100;
         margin-bottom: 5px;
+        color: white;
+    font-size: 12px;
+    font-family: 'Fira Sans';
+    font-weight: 100;
+    word-wrap: break-word;
     }
 }
 
 @media (max-width: 600px) {
     .manga_tags span {
         font-size: 7pt!important;
+
     }
 }
 

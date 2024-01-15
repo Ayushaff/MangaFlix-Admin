@@ -22,12 +22,13 @@
 
 .slider-item {
     display: flex;
+    
     width: 372px;
     height: 240px;
-    margin-right: 20px;
+    margin-right: 92px;
     border-radius: 14px;
     background-color: #f0f1f2;
-
+    margin-bottom:140px;
     &:last-child {
         margin-right: 0;
     }

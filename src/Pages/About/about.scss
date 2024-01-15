@@ -1,0 +1,60 @@
+// about.scss
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Use 80% of the viewport height */
+  }
+  
+  .Rectangle12 {
+    max-width: 800px; /* Set a maximum width for the rectangle */
+    height: 500px; /* Fixed height on desktop */
+    background: #CAE7F6;
+    border-radius: 46px;
+    border: 2px #5C8374 solid;
+    padding: 20px; /* Add some padding to the container */
+  }
+  
+  .about-us {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px; /* Move the "ABOUT US" heading up */
+    
+    font-weight: bold; /* Make the heading bold */
+    align-items: center;
+    font-size: 40px;
+    font-family: "Montserrat-Bold", Helvetica;
+  }
+  
+  .text-wrapper {
+    color: #0c0c0c;
+    font-family: "Montserrat-SemiBold", Helvetica;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 20px; /* Adjust left margin */
+  margin-right: 20px; /* Adjust right margin */
+    word-wrap: break-word; /* Prevent text overflow */
+    p {
+      margin-bottom: 20px;
+      margin-left: 0; /* Adjust margin for mobile */
+      margin-right: 0; /* Adjust margin for mobile */
+      margin-top: 20px; /* Add some space between paragraphs */
+    }
+  }
+  
+  
+  
+  @media (max-width: 768px) {
+    .Rectangle12 {
+      height: auto; /* Allow height to adjust based on content */
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+  
+    p {
+      margin-left: 10px; /* Adjust margin for smaller screens */
+      margin-right: 10px; /* Adjust margin for smaller screens */
+    }
+  }
+  

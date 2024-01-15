@@ -1,15 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import styles from "../auth.module.scss";
 import "./singup.scss";
 import logo from "../Login/go.png";
 import Form from "../../../SharedUI/Form/Form";
-import Input from "../../../SharedUI/Form/Input";
-import CheckBox from "../../../SharedUI/Form/CheckBox";
-import Buttons from "../../../SharedUI/Form/Buttons";
 import { useNavigate } from "react-router-dom";
 import MainContainer from "../../../Layouts/MainContainer/MainContainer";
-import Modal from "../../../Features/Modal/Modal";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";

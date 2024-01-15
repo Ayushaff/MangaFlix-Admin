@@ -1,102 +1,162 @@
 .chapter-page {
-    margin: 20px 20px 0px 20px;
+    margin: 20px 20px 0 20px;
     display: grid;
     grid-template-areas: 
-        'chapter-title'
-        'chapter-content';
+      'chapter-title'
+      'chapter-content';
     gap: 10px;
     justify-content: start;
     grid-template-columns: 1fr;
-}
-
-.chapter-title {
+  }
+  
+  .chapter-title {
     p:last-child {
-        user-select: none
+      user-select: none;
     }
-
+  
     width: 100%;
     grid-area: chapter-title;
     justify-self: start;
-
+  
     .chapter-name {
-        font-size: 16pt;
-        margin-bottom: 3px;
+      font-size: 16pt;
+      margin-bottom: 3px;
+      font-family: "Poppins-SemiBold", Helvetica;
+      font-size: 25px;
+      font-weight: 600;
+      color: white;
     }
-
+  
     .manga-name {
-        margin-bottom: 17px;
-        font-size: 14pt;
-        color: #ff6740;
+      margin-bottom: 17px;
+      font-family: "Poppins-SemiBold", Helvetica;
+      font-size: 22px;
+      font-weight: 600;
+      color: white;
     }
-
+  
     .translator {
-        font-size: 16pt;
-        font-weight: bold;
-        margin-top: 7px;
+      font-size: 16pt;
+      font-weight: bold;
+      margin-top: 7px;
     }
-}
-
-.read-progress-info {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .read-progress-info {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
     gap: 15px;
-
+    margin-bottom: 20px;
     div {
-        display: block;
-        align-content: center;
-        justify-content: center;
-        text-align: center;
-        padding-top: 2px;
-        border-radius: 2px;
-        background-color: #f0f1f2;
-        color: #2f383e;
-        font-weight: bold;
-        font-size: 14pt;
-        cursor: pointer;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: 2px;
+      width: 100px;
+      border-radius: 10px;
+      background-color: #1b4242;
+      color: white;
+      font-family: "Poppins-SemiBold", Helvetica;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
     }
-
+    
     min-height: 28px;
-}
-
-.chapter-content {
+  }
+  
+  .c-server {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    right: 80px;
+  }
+  .c-server p {
+    margin-top: 5px; 
+  }
+  .c-menu {
+    flex-direction: row;
+    position: relative;
+    cursor: pointer;
+    left: 80px;
+  }
+  
+  .menu-icon {
+    margin-right: 5px; /* Adjust the margin as needed */
+  }
+  
+  .c-menu p {
+    margin-top: 5px;
+  }
+  .c-menu svg{
+    margin-left: 9px;
+    margin-top: 3px;
+  }
+  .c-vol p{
+      margin-top: 5px;
+  }
+  .c-pg p{
+      margin-top: 5px;
+  }
+  .chapter-content {
     width: 100%;
     grid-area: chapter-content;
     display: flex;
     justify-content: center;
     align-items: center;
-
+  
     img {
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        user-select: none
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      user-select: none;
     }
-}
-
-@media (max-width: 640px) {
-    .chapter-description {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+  }
+  
+  @media (max-width: 640px) {
+    .chapter-page {
+      margin: 20px 10px 0 10px;
     }
-
-    .read-progress-info div {
+  
+    .chapter-title {
+      text-align: center;
+      .chapter-name {
+        font-size: 20px;
+      }
+      .manga-name {
+        font-size: 18px;
+      }
+      .translator {
+        font-size: 14px;
+      }
+    }
+  
+    .read-progress-info {
+      flex-direction: row;
+      align-items: center;
+      div {
         font-weight: lighter;
         font-size: 12pt;
+        width: 100px;      
+      }
     }
-
+  
     .translator {
-        font-weight: lighter!important;
+      font-weight: lighter !important;
     }
-
+  
     .chapter-content {
-        min-height: 100vh;
-
-        img {
-            position: absolute;
-            max-height: 100%!important;
-            max-width: 100%!important;
-        }
+      min-height: 100vh;
+      img {
+        position: absolute;
+        max-height: 100% !important;
+        max-width: 100% !important;
+      }
     }
-}
+  }
+  

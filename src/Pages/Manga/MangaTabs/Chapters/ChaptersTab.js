@@ -8,24 +8,24 @@ import PopularTab from "../../../../Components/AdditionalInfo/PopularTab";
 import { useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-
 const ChaptersTab = memo(({ mangaId, mangaInfo }) => {
   const theme = useSelector((state) => state.theme);
-  useEffect(()=>{
-    
-  },[]);
+  useEffect(() => {}, []);
   return (
     <>
       {/* <MangaContent mangaId={mangaId} mangaInfo={mangaInfo} ></MangaContent> */}
-      <div className={styles.wrapp} style={{
-        color : theme.darkmode ? "white" : "black"
-      }}>
+      <div
+        className={styles.wrapp}
+        style={{
+          color: theme.darkmode ? "white" : "black",
+        }}
+      >
         <div className="chapters-choose">
-          <MangaTopBar mangaInfo={mangaInfo}/>
+          <MangaTopBar mangaInfo={mangaInfo} />
 
           <MangaHeader mangaInfo={mangaInfo} />
 
-          <Volumes mangaId={mangaId} mangaInfo={mangaInfo}/>
+          <Volumes mangaId={mangaId} mangaInfo={mangaInfo} />
 
           {/* need to pass stuff */}
           {/* <RelatedSeries /> */}
@@ -48,35 +48,57 @@ const ChaptersTab = memo(({ mangaId, mangaInfo }) => {
   );
 });
 
-
-const MangaTopBar=({mangaInfo})=>{
+const MangaTopBar = ({ mangaInfo }) => {
   const theme = useSelector((state) => state.theme);
   return (
-      <>
-      <div className="manga-top-bar" style={{
-        backgroundColor: theme.colors.body,
-        color : theme.darkmode ? "white" : "black"
-      }}>
-          Mangaflix <span style={{color : theme.colors.trendingManga}}> &gt; </span> {mangaInfo?.data?.attributes?.title?.en}
+    <>
+      <div
+        className="manga-top-bar"
+        style={{
+          backgroundColor: theme.colors.body,
+          color: theme.darkmode ? "white" : "black",
+          fontFamily: "Fira Sans",
+          fontWeight: "400",
+          fontSize: 17,
+          wordWrap: "break-word",
+        }}
+      >
+        Mangaflix{" "}
+        <span style={{ color: theme.colors.trendingManga }}>&gt;</span>{" "}
+        {mangaInfo?.data?.attributes?.title?.en}
       </div>
-      </>
+    </>
   );
-}
+};
 
-const MangaTopBar1=({mangaInfo})=>{
+const MangaTopBar1 = ({ mangaInfo }) => {
   const theme = useSelector((state) => state.theme);
   return (
-      <>
-      <div className="manga-top-bar1" style={{
-        backgroundColor: theme.colors.body,
-        color : theme.darkmode ? "white" : "black"
-      }}>
-          <b><span style={{color : theme.darkmode ? "white" : "black"}}> Popular </span></b>
+    <>
+      <div
+        className="manga-top-bar1"
+        style={{
+          backgroundColor: theme.colors.body,
+          color: theme.darkmode ? "white" : "black",
+        }}
+      >
+        <b>
+          <span
+            style={{
+              color: "#0D0D0D",
+              fontSize: 17,
+              fontFamily: "Fira Sans",
+              fontWeight: "800",
+              wordWrap: "break-word",
+            }}
+          >
+            {" "}
+            Popular{" "}
+          </span>
+        </b>
       </div>
-      </>
+    </>
   );
-}
-
-
+};
 
 export default ChaptersTab;

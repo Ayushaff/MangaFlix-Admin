@@ -1,20 +1,10 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import ReactDOM from "react-dom";
 import styles from "../auth.module.scss";
-
-import Form from "../../../SharedUI/Form/Form";
-import Input from "../../../SharedUI/Form/Input";
-import Buttons from "../../../SharedUI/Form/Buttons";
-import CheckBox from "../../../SharedUI/Form/CheckBox";
-
 import logo from "./go.png";
 import MainContainer from "../../../Layouts/MainContainer/MainContainer";
 import { setUser } from "../../../Store/Slices/userSlice";
-import Spinner from "../../../SharedUI/LoadComponents/Spiner/Spinner";
-import Modal from "../../../Features/Modal/Modal";
-import ErrorModal from "../../../Components/Modals/ErrorModal/ErrorModal";
 import MangaDexApi from "../../../Services/MangaDexApi";
 import { Helmet } from "react-helmet";
 import "./signin.scss";

@@ -17,7 +17,7 @@ const Chapter = ({ chapter, byUser = false, mangaInfo }) => {
 
   const redirectToReader = () => {
     navigate(`/chapter/${mangaInfo.data.id}`);
-}
+  };
 
   useEffect(() => {
     if (chapter) setChName(Object.keys(chapter)[0]);
@@ -34,11 +34,30 @@ const Chapter = ({ chapter, byUser = false, mangaInfo }) => {
     <div className={styles.chapters_block}>
       {byUser ? null : (
         <div className={styles.chapters_block_main}>
-          <div className={styles.title} onClick={() => redirectToReader()}>
+          <div
+            className={styles.title}
+            onClick={() => redirectToReader()}
+            style={{
+              color: "#0D0D0D",
+              fontSize: 18,
+              fontFamily: "Fira Sans",
+              fontWeight: "500"
+            }}
+          >
             {Object.keys(chapter)[0]}
             <div></div>
           </div>
-          <div>published date</div>
+          <div  
+            style={{
+              color: "#6D6D6D",
+              fontSize: 15,
+              fontFamily: "Fira Sans",
+              fontWeight: "500",
+              marginTop: 5,
+            }}
+          >
+            December 27, 2023
+          </div>
         </div>
       )}
 
